@@ -1,0 +1,2 @@
+Processed video: uploads/many_angles.mp4
+Class ID: 0
