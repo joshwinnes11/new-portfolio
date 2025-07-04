@@ -1,0 +1,3 @@
+[submodule "dummy_programs"]
+	path = dummy_programs
+	url = https://github.com/joshwinnes11/dummy_programs.git
