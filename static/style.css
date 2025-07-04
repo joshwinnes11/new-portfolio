@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f8f8f8;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+h1 {
+    color: #333;
+}
+
+a {
+    color: #2c7;
+}
+

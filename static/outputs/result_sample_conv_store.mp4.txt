@@ -1,0 +1,2 @@
+Processed video: uploads/sample_conv_store.mp4
+Class ID: 0
