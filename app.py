@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for
 import os
 from werkzeug.utils import secure_filename
-from dummy_projects import dummy_projects
+from dummy_programs import dummy_projects
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "uploads"
