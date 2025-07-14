@@ -41,5 +41,5 @@ def flow_counter_demo():
     return render_template("project_detail.html", slug="flow-counter", result_video=result_file, error=error)
 
 if __name__ == "__main__":
-    print("🚀 Flask starting on http://127.0.0.1:5000")
-    app.run(debug=True)
+    print("🚀 Flask starting on http://0.0.0.0:5000")
+    app.run(debug=True, host="0.0.0.0", port=5000)
