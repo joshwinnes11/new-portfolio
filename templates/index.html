@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
   <meta name="description" content="Add small description of yourslef.">
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="Josh Winnes, data, science, data science, wheaton college, machine learning, AI, IBM" />
-  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="{% static "style.css" %}" />
 </head>
 
 <body>
@@ -72,175 +73,10 @@
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="~/portfolio/new-portfolio/static/images/Josh_Winnes_10.jpg" alt="" />
+            <img class="about__photo" src="{% static "images/Josh_Winnes_10.jpg" %} alt="" />
           </div>
         </div>
       </div>
-
-
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Deepfake (AI) Voice Detection</h3>
-              <p>
-                Binary audio classification using various neural networks architectures to detect whether voice recordings 
-                are real human voices or AI generated with 99% accuracy.  
-              </p>
-              <ul class="work__list">
-                <li>CNN Neural Network</li>
-                <li>RNN Neural Network</li>
-                <li>Random Forest</li>
-                <li>Binary Classification</li>
-                <li>Audio Feature Extraction</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/joshwinnes11/Final-Project" target="_blank" class="link__text">
-                  View Repository <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/joshwinnes11" title="View My GitHub" target="_blank">
-                  <img src="/static/images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            
-            <div class="work__image-box">
-              <a href="https://github.com/joshwinnes11/Final-Project" title="View Project Repository" target="_blank">
-                <img src="/static/images/RNN Classifier Results (Final Project).png" class="work__image" alt="RNN Results" />
-              </a>
-            </div>
-          </div>
-          
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Webpage Text Classification</h3>
-              <p>
-                Textual categorical classification on websites using labeled UN SDG data. Neural Network classifier achieved 65% accuracy.
-              </p>
-              <ul class="work__list">
-                <li>Natural Languange Processing</li>
-                <li>Categorical Classification</li>
-                <li>Neural Networks</li>
-                <li>Tensorflow and Keras</li>
-                <li>Tokenization</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/joshwinnes11/Project-4" target="_blank" class="link__text">
-                  View Repository <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/joshwinnes11" title="View My GitHub" target="_blank">
-                  <img src="/static/images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            
-            <div class="work__image-box">
-              <a href="https://github.com/joshwinnes11/Project-4" target="_blank" class="link_text">
-                <img src="/static/images/un_sdgs.jpeg" class="work__image" alt="Website Classification" />
-              </a>  
-            </div>
-          </div>
-          
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Spring Break Ski Trip Visualization and Arterial Oxygen Saturation Analysis</h3>
-              <p>
-                Visualization of GPX and KML skiing data using Folium maps. This data was collected
-                using the Slopes app. We also analyized how Arterial Oxygen Saturation (AOS) changes with 
-                elevation and speed. 
-              </p>
-              <ul class="work__list">
-                <li>Geospatial Visualization</li>
-                <li>Staypoint Analysis</li>
-                <li>Geopandas</li>
-                <li>Folium</li>
-                <li>Sci-Kit Mobility</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/joshwinnes11/Project2" target="_blank" class="link__text">
-                  View Repository <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/joshwinnes11" title="View My GitHub" target="_blank">
-                  <img src="/static/images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <a href="https://github.com/joshwinnes11/Project2" target="_blank" class="link_text">
-                <img src="/static/images/Ski_Project1.png" class="work__image" alt="Ski Project" />
-              </a>
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Instacart Item Association Analysis</h3>
-              <p>
-                Association analysis for online shopping using free Instacart data on Kaggle.
-              </p>
-              <ul class="work__list">
-                <li>Association Analysis</li>
-                <li>HMine Algorithm</li>
-                <li>Python</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/jonathancontreras02/Project1.1" target="_blank" class="link__text">
-                  View Repository <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/joshwinnes11" title="View My GitHub" target="_blank">
-                  <img src="/static/images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            
-            <div class="work__image-box">
-              <a href="https://github.com/jonathancontreras02/Project1.1" target="_blank" class="link_text">
-                <img src="/static/images/instacart_project.png" class="work__image" alt="Project 1" />
-              </a>
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Housing Prices Prediction</h3>
-              <p>
-                Predicting housing prices given various property attributes. 
-              </p>
-              <ul class="work__list">
-                <li>Machine Learning</li>
-                <li>Regression Analysis</li>
-                <li>Prediction</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/joshwinnes11/HousePrices-AdvancedRegressionTechniques" class="link__text">
-                  View Repository <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/joshwinnes11" title = 'View My GitHub' target = '_blank'>
-                  <img src="/static/images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <a href="https://github.com/joshwinnes11/HousePrices-AdvancedRegressionTechniques" target="_blank" class="link_text">
-                <img src="/static/images/housing_prices_description.png" class="work__image" alt="Project 1" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
       <!-- ***** Contact ***** -->
 
@@ -293,9 +129,9 @@
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="/static/images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+    <img src="{% static "images/arrow-up.svg"%}" alt="Back to Top" class="back-to-top__image"/>
   </a>
-  <script src="../static/script.js"></script>
+  <script src="{%static "script.js"%}"></script>
 </body>
 
 </html>
