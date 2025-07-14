@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, url_for
 import os
 from werkzeug.utils import secure_filename
-from dummy_programs import dummy_projects
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "uploads"
@@ -32,7 +31,7 @@ def flow_counter_demo():
             output_path = os.path.join(app.config["OUTPUT_FOLDER"], output_filename)
 
             video_file.save(input_path)
-            dummy_projects.run_dummy(video_path=input_path, class_id=class_id, output_path=output_path)
+            # dummy_projects.run_dummy(video_path=input_path, class_id=class_id, output_path=output_path)
 
             result_file = f"outputs/{output_filename}"  # relative to static/
         except Exception as e:
