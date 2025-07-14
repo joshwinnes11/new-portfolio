@@ -1,21 +1,18 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="../static/images/JW.png" />
+  <link rel="shortcut icon" type="image/png" href="/static/images/JW.png" />
 
-  <!-- Put your site title here -->
   <title>
     Josh Winnes | Data Scientist | Boston, MA
   </title>
 
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="description" content="Add small description of yourself.">
   <meta name="keywords" content="Josh Winnes, data, science, data science, wheaton college, machine learning, AI, IBM" />
-  <link rel="stylesheet" href="{% static "style.css" %}" />
+  <link rel="stylesheet" href="/static/style.css" />
 </head>
 
 <body>
@@ -28,22 +25,16 @@
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
           <span>Josh Winnes</span>
         </h1>
-        <!-- Put a small paragraph about yourself -->
         <p>Data Scientist | Boston, MA</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
@@ -59,26 +50,24 @@
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
             <p>
               Hi! I'm Josh Winnes. I'm from the seacoast of New Hampshire 
               but am currently a senior at Wheaton College in Illinois studying Mathematics 
-              with a concentration in Statistics.  In my free time, I love 
+              with a concentration in Statistics. In my free time, I love 
               to do pretty much anything outside. I especially love skiing, spending 
               time at Lake Winnepesaukee in the summer, and exploring NH's White Mountains.
             </p>
-            <!-- Provide a link to your resume -->
             <a href="https://github.com/joshwinnes11/Portfolio/blob/main/Resume%20-%20Josh%20Winnes%20(10%3A21%3A24).pdf" class="btn">My Resume</a>
           </div>
 
           <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="{% static "images/Josh_Winnes_10.jpg" %} alt="" />
+            <img class="about__photo" src="/static/images/Josh_Winnes_10.jpg" alt="Photo of Josh Winnes" />
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- ***** Contact ***** -->
+    <!-- ***** Contact ***** -->
 
     <section class="contact" id="contact">
       <div class="row">
@@ -89,7 +78,6 @@
             helping you gather data-based insights to boost your productivity!
             Inquire via email. 
           </p>
-          <!-- Replace the email with yours -->
           <a href="mailto:joshwinnes@icloud.com" class="btn">joshwinnes@icloud.com</a>
         </div>
       </div>
@@ -101,7 +89,6 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
           <a href="https://github.com/joshwinnes11" title="Link to Github Profile">
@@ -115,7 +102,6 @@
         </li>
       </ul>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me Thanks. -->
       <p>
         &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
       </p>
@@ -129,9 +115,9 @@
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="{% static "images/arrow-up.svg"%}" alt="Back to Top" class="back-to-top__image"/>
+    <img src="/static/images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
-  <script src="{%static "script.js"%}"></script>
+  <script src="/static/script.js"></script>
 </body>
 
 </html>
