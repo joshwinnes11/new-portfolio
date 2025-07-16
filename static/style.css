@@ -337,22 +337,59 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: var(--gutter-normal) 0;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav.sticky {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: var(--gutter-normal) 0;
+    top: 0;
 }
 
 .nav__items {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
-.nav__item:not(:last-child) {
-    margin-right: var(--gutter-medium);
+.nav__item {
+    margin: 0 1rem;
+    transition: all 0.3s ease;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 768px) {
     .nav {
         justify-content: center;
+        min-width: 250px;
+        margin: 1rem auto;
+    }
+    
+    .nav.sticky {
+        width: 95%;
+        max-width: 600px;
+        top: 10px;
+    }
+    
+    .nav__item {
+        margin: 0 0.5rem;
+    }
+    
+    .nav__link {
+        padding: 0.8rem 1rem;
+        font-size: var(--font-size-small);
     }
 }
 
@@ -375,7 +412,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 0;
     text-decoration: none;
     color: inherit;
-    transition: all .2s;
+    transition: all .3s;
 }
 
 .nav__link::after {
@@ -429,7 +466,7 @@ body:not(.user-is-tabbing) a:focus {
     background-attachment: fixed;
     background-repeat: no-repeat;
     filter: blur(8px); /* Adjust blur radius as needed */
-    z-index: 1; /* Ensure the blur is behind the text */
+    z-index: 0; /* Ensure the blur is behind the text */
 }
 
 .navbar {
@@ -447,6 +484,7 @@ body:not(.user-is-tabbing) a:focus {
     z-index: 2; /* Ensure text is above the blur */
     text-align: center; /* Center the text */
     position: relative;
+    transition: opacity 0.3s ease;
 }
 
 .header__text p {
@@ -467,6 +505,12 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 
+
+main {
+    padding-top: 8rem; /* Space for navigation bar */
+    position: relative;
+    z-index: 1;
+}
 
 /* --------------------------------------- */
 /* ----- Work ----- */
