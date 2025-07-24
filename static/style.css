@@ -114,12 +114,6 @@ html {
     font-style: normal;
 }
 
-@media(max-width: 1000px) {
-    html {
-        font-size: 52%;
-    }
-}
-
 body {
     font-size: 12px;
     font-family: "Spectral", serif; 
@@ -127,40 +121,6 @@ body {
     color: var(--blue);
     background: var(--cream);
     overflow-x: hidden;
-}
-
-.row {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-}
-
-@media(max-width: 1340px) {
-    .row {
-        max-width: 1100px;
-    }
-}
-
-@media(max-width: 1240px) {
-    .row {
-        padding: 0 var(--gutter-medium);
-    }
-}
-
-@media(max-width: 600px) {
-    .row {
-        padding: 0 var(--gutter-normal);
-    }
-}
-
-@media(max-width: 600px) {
-    .row {
-        padding: 0 var(--gutter-small);
-    }
-}
-
-section {
-    padding: var(--gutter-huge) 0;
-    border-bottom: var(--border-light);
 }
 
 img {
@@ -216,7 +176,7 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     position: fixed;
-    margin-top: 20px;
+    margin-top: 2rem;
     top: 0;
     left: 0;
     right: 0;
@@ -267,11 +227,34 @@ body {
 
 /* Content Stuff */
 
+.welcome-outer-box {
+    margin: 15rem 5rem 5rem 5rem;
+    border: 5px solid var(--dark-blue);
+    height: 75vh;
+    padding: 0.5rem; /* This creates the gap for middle box */
+}
+
+.welcome-inner-box {
+    border: 8px solid var(--cream);
+    height: 100%; /* Fill the outer box */
+    padding: 1rem; /* This creates the gap for inner box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-inner-box h1 {
+    margin: 0; /* Remove default h1 margins */
+    text-align: center;
+    font-size: 10rem;
+    color: var(--dark-blue);
+}
+
 .content-section {
     text-align: center;
     position: relative;
     z-index: 1;
-    margin-top: 100vh; /* Start after the full viewport height */
+    margin-top: 0vh; /* Start after the full viewport height */
     padding: 4rem 4rem;
     background: var(--cream); /* Solid background so content slides over image */
     /* min-height: 200vh; Make it tall enough to scroll */
