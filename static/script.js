@@ -1,6 +1,6 @@
 window.addEventListener('scroll', () => {
   const scrolled = window.pageYOffset;
-  const parallaxSpeed = 0.3; 
+  const parallaxSpeed = 0.5; 
   const homeImage = document.querySelector('.home_image');
   if (homeImage) {
       homeImage.style.transform = `translateY(${-1 * scrolled * parallaxSpeed}px)`;
