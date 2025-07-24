@@ -12,9 +12,21 @@ os.makedirs(app.config["OUTPUT_FOLDER"], exist_ok=True)
 def home():
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/projects")
 def projects():
     return render_template("projects.html")
+
+@app.route("/fun_stuff")
+def fun_stuff():
+    return render_template("fun_stuff.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 @app.route("/projects/flow-counter", methods=["GET", "POST"])
 def flow_counter_demo():
@@ -40,5 +52,5 @@ def flow_counter_demo():
     return render_template("project_detail.html", slug="flow-counter", result_video=result_file, error=error)
 
 if __name__ == "__main__":
-    print("🚀 Flask starting on http://0.0.0.0:5000")
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    print("🚀 Flask starting on http://0.0.0.0:8080")
+    app.run(debug=True, host="0.0.0.0", port=8080)

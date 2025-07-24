@@ -1,43 +1,40 @@
-/* -----------------------------------------
-  Have focus outline only for keyboard users 
- ---------------------------------------- */
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const parallaxSpeed = 0.3; 
+  const homeImage = document.querySelector('.home_image');
+  if (homeImage) {
+      homeImage.style.transform = `translateY(${-1 * scrolled * parallaxSpeed}px)`;
+  }
+});
 
- const handleFirstTab = (e) => {
-    if(e.key === 'Tab') {
-      document.body.classList.add('user-is-tabbing')
-  
-      window.removeEventListener('keydown', handleFirstTab)
-      window.addEventListener('mousedown', handleMouseDownOnce)
-    }
-  
-  }
-  
-  const handleMouseDownOnce = () => {
-    document.body.classList.remove('user-is-tabbing')
-  
-    window.removeEventListener('mousedown', handleMouseDownOnce)
-    window.addEventListener('keydown', handleFirstTab)
-  }
-  
-  window.addEventListener('keydown', handleFirstTab)
-  
-  const backToTopButton = document.querySelector(".back-to-top");
-  let isBackToTopRendered = false;
-  
-  let alterStyles = (isBackToTopRendered) => {
-    backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-    backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-    backToTopButton.style.transform = isBackToTopRendered
-      ? "scale(1)"
-      : "scale(0)";
-  };
-  
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 700) {
-      isBackToTopRendered = true;
-      alterStyles(isBackToTopRendered);
-    } else {
-      isBackToTopRendered = false;
-      alterStyles(isBackToTopRendered);
-    }
+const nav_buttons = document.querySelectorAll('.nav__link');
+nav_buttons.forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    console.log('entered');
+    button.style.color = 'var(--cream)';
+    button.style.background = 'var(--dark-blue)';
+    button.style.transition = 'all 0.3s ease';
   });
+  button.addEventListener('mouseleave', () => {
+    console.log('left');
+    button.style.color = 'var(--dark-blue)';
+    button.style.background = 'transparent';
+    button.style.transition = 'all 0.1s ease';
+  });
+});
+
+const content_buttons = document.querySelectorAll('.content-button a');
+content_buttons.forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    button.style.color = 'var(--dark-brown)';
+    button.style.background = 'var(--cream)';
+    button.style.border = '2px solid var(--dark-brown)';
+    button.style.transition = 'all 0.3s ease';
+  });
+  button.addEventListener('mouseleave', () => {
+    button.style.color = 'var(--cream)';
+    button.style.background = 'var(--dark-brown)';
+    button.style.border = '2px solid var(--cream)';
+    button.style.transition = 'all 0.1s ease';
+  });
+});
