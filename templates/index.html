@@ -5,9 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="/static/images/JW.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
   <title>
-    Josh Winnes | Data Scientist
+    Josh Winnes | Home
   </title>
 
   <meta name="description" content="Add small description of yourself.">
@@ -16,104 +19,44 @@
 </head>
 
 <body>
-
-  <!-- ***** Header ***** -->
-
-  <!-- Navigation Bar (separate from header) -->
-  <nav class="nav" role="navigation">
-    <ul class="nav__items">
-      <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
-      <li class="nav__item"><a href="/projects" class="nav__link">Projects</a></li>
-      <li class="nav__item"><a href="/about" class="nav__link">Demos</a></li>
-      <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
-    </ul>
-  </nav>
-
-  <header class="header" role="banner" id="top">
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>Josh Winnes</span>
-        </h1>
-      </div>
+  <header class="top-bar">
+    <div class="logo">
+      <a href="/">JW</a>
     </div>
-  </header>
-
-  <main role="main">
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <p>
-              Hi! I'm Josh Winnes. I just graduated Wheaton College in Illinois with a B.S. in Mathematics
-              and an Endorsement in Data Science. In my free time, I love 
-              to do pretty much anything outside. I especially love skiing, spending 
-              time at Lake Winnepesaukee in the summer, and exploring NH's White Mountains.
-            </p>
-            <a href="/static/files/Josh Winnes - Resume.pdf" class="btn" download>My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <img class="about__photo" src="/static/images/Josh_Winnes_10.jpg" alt="Photo of Josh Winnes" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** Contact ***** -->
-
-    <section class="contact" id="contact">
-      <div class="row">
-        <h2>Get in Touch</h2>
-        <div class="contact__info">
-          <p>
-            I'm a highly motivated data scientist who is ready to get to work
-            helping you gather data-based insights to boost your productivity!
-            Inquire via email. 
-          </p>
-          <a href="mailto:joshwinnes@icloud.com" class="btn">joshwinnes@icloud.com</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ***** Footer ***** -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://github.com/joshwinnes11" title="Link to Github Profile">
-            <img src="/static/images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/joshwinnes/">
-            <img src="/static/images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
+    <nav class="nav">
+      <ul class="nav__items">
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/projects" class="nav__link">Projects</a></li>
+        <li class="nav__item"><a href="/fun_stuff" class="nav__link">Fun Stuff</a></li>
+        <li class="nav__item"><a href="/contact" class="nav__link">Contact</a></li>
       </ul>
+    </nav>
+  </header>
+  
+  <img src="/static/images/sky_pano.JPG" class="home_image">
 
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
+  <div class="content-section">
+    <h1>About Me</h1>
+    <div class="content-content">
+      <img src="/static/images/Josh_Winnes_10.jpg" class="content-img">
+      <div class="content-text-and-button">
+        <p class="content-text">
+          I’m a student at Wheaton College studying math 
+          (with a stats focus), originally from New Hampshire.
+          I’m into ultimate frisbee, skiing, and finding 
+          creative ways to connect with people — whether 
+          that’s through intramurals, campus ministry, or 
+          just hanging out. I like learning how things work 
+          (especially numbers and people), and I’m always up 
+          for a good conversation or a spontaneous adventure.
+        </p>
+        <div class="content-button">
+          <a href="about.html">Read More</a>
+        </div>
       </div>
     </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="/static/images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
+  </div>
+  
   <script src="/static/script.js"></script>
 </body>
 
